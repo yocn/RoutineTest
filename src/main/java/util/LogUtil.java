@@ -6,4 +6,9 @@ public class LogUtil {
             System.out.println(o == null ? "null" : o.toString());
         }
     }
+
+    public static void d(Object o) {
+        System.out.println(o == null ? "null" : o.toString());
+    }
+
 }

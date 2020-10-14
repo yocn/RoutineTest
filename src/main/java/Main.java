@@ -1,3 +1,5 @@
+import algorithm.DynamicProgramming.ZeroOnePackage;
+import algorithm.GreedyAlgorithm;
 import algorithm.PrefixSum.BestWorkTime;
 import algorithm.PrefixSum.CommonPrefix;
 import algorithm.PrefixSum.MinM;
@@ -9,6 +11,7 @@ import algorithm.other.HammingDistance;
 import algorithm.other.SortArray;
 import algorithm.stackQueue.Queue2Stack;
 import algorithm.stackQueue.Stack2Queue;
+import lock.ATestLock;
 import lock.ProducerAndCustomer;
 import structure.testLinkedList;
 import util.LogUtil;
@@ -220,8 +223,51 @@ public class Main {
 //        new StageWater().test();
 //        new CommonPrefix().test();
 //        new MinM().test();
-        new BestWorkTime().test();
+//        new BestWorkTime().test();
 //        new testZipFile().test();
+//        new ATestLock().doTest();
+//        XApple();
+//        new XApple().test();
+//        LogUtil.Companion.d(getKidsModeEmailContentId("AggtCXIMrc9uqyGGhN6u0M7nwQB7F8BZl1fv3dWlLDvWthaXztII7GF/TsjEaRhF9Hl+os1Ht+jzVMm7q0egsg"));
+//        new GreedyAlgorithm().test();
+        new ZeroOnePackage().test();
+    }
+
+    public static String getKidsModeEmailContentId(String encrypt) {
+        // 33 is '!', char under 33 maybe cannot show normal, fake char must bigger than 33
+        int base = (int) 33;
+        char[] chars = encrypt.toCharArray();
+        int length = chars.length;
+        char[] targetChars = new char[length * 2];
+        for (int i = 0; i < length; i++) {
+            targetChars[i * 2] = chars[i];
+            int half = chars[i] / 2;
+            half = half < 33 ? half + (chars[i] - half) / 2 : half;
+            targetChars[i * 2 + 1] = (char) half;
+        }
+        return String.valueOf(targetChars);
+    }
+
+    public static void XApple() {
+        int apple = 10;
+        XAppleInternal("", apple, 0, 0);
+    }
+
+    private static void XAppleInternal(String result, int remain, int eat, int days) {
+        if (eat != 0) {
+            result = result + " " + eat;
+        }
+        if (remain == 0) {
+            LogUtil.Companion.d(days + " - " + result);
+            return;
+        }
+        if (remain < 0) {
+            return;
+        }
+        days++;
+        XAppleInternal(result, remain - 1, 1, days);
+        XAppleInternal(result, remain - 2, 2, days);
+        XAppleInternal(result, remain - 3, 3, days);
     }
 
 //    static class O {

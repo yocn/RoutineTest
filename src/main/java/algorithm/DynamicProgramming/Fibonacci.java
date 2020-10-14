@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package algorithm.DynamicProgramming;
 
 import util.LogUtil;
 
