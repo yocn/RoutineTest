@@ -1,5 +1,7 @@
+import algorithm.Atoi;
 import algorithm.DynamicProgramming.ZeroOnePackage;
 import algorithm.GreedyAlgorithm;
+import algorithm.JumpSkip;
 import algorithm.PrefixSum.BestWorkTime;
 import algorithm.PrefixSum.CommonPrefix;
 import algorithm.PrefixSum.MinM;
@@ -14,10 +16,15 @@ import algorithm.stackQueue.Stack2Queue;
 import lock.ATestLock;
 import lock.ProducerAndCustomer;
 import structure.testLinkedList;
+import testJava.TestI;
 import util.LogUtil;
 import zipFileTest.testZipFile;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.text.DecimalFormat;
 import java.util.*;
 
 /**
@@ -230,7 +237,108 @@ public class Main {
 //        new XApple().test();
 //        LogUtil.Companion.d(getKidsModeEmailContentId("AggtCXIMrc9uqyGGhN6u0M7nwQB7F8BZl1fv3dWlLDvWthaXztII7GF/TsjEaRhF9Hl+os1Ht+jzVMm7q0egsg"));
 //        new GreedyAlgorithm().test();
-        new ZeroOnePackage().test();
+//        new ZeroOnePackage().test();
+//        LogUtil.d("age::"+"A,B,C".toLowerCase());
+//        LogUtil.d("age::"+"A,B,C".toUpperCase());
+//        StackTraceElement[] elements = Thread.currentThread().getStackTrace();
+//        for (StackTraceElement e : elements) {
+//            LogUtil.d("e:::" + e.toString());
+//        }
+//        set(Atoii.class);
+//        String PLACEHOLDER = "${PLACEHOLDER}";
+//        String rawString = "WATCH AD-FREE WITH ${PLACEHOLDER}%s$d COINS";
+//        int placeholderIndex = rawString.indexOf(PLACEHOLDER);
+//        rawString = rawString.substring(0, placeholderIndex).concat(
+//                rawString.substring(placeholderIndex + PLACEHOLDER.length()));
+//        LogUtil.d(rawString);
+
+//        String ss = "aaaa@";
+//        String[] re = ss.split("@");
+//
+//        LogUtil.d("re:" + Arrays.asList(re).toString());
+//        LogUtil.d("re:" + formatTosepara(1024134300));
+
+
+//        ArrayList list = new ArrayList();
+//        Thread thread1 = new Thread(() -> {
+//            while(true){
+//                try {
+//                    Thread.sleep(900);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//                LogUtil.d("add");
+//            }
+//        });
+//        Thread thread2 = new Thread(() -> {
+//            while(true){
+//                try {
+//                    Thread.sleep(1000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//                LogUtil.d("remove");
+//            }
+//        });
+//        thread1.run();
+//        thread2.run();
+
+//        String desc = "Ad-Free Viewing for 1 day";
+//        String desc = "Ad-FreeViewingfor 1 day";
+
+//        int lastFirst = desc.lastIndexOf(' ');
+//        if (lastFirst > 0) {
+//            String lastFirstString = desc.substring(0, lastFirst);
+//            int lastSecond = lastFirstString.lastIndexOf(' ');
+//            if(lastSecond>0){
+//                desc = desc.substring(0, lastSecond).concat("\n").concat(desc.substring(lastSecond));
+//                LogUtil.d("s:" + desc);
+//            }
+//        }
+//        JumpSkip.test();
+        new TestI().testMethodA();
+        new TestI().testMethodB();
+        new TestI().testMethodC();
+    }
+
+    private static String getSubStr(String str, int num) {
+        String result = "";
+        int i = 0;
+        while (i < num) {
+            int lastFirst = str.lastIndexOf(' ');
+            result = str.substring(lastFirst) + result;
+            str = str.substring(0, lastFirst);
+            i++;
+        }
+        return result.substring(1);
+    }
+//    public static String getCoinsString(int num) {
+//        String raw = String.valueOf(num);
+//        String result = raw;
+//        if (num > 1000) {
+//            result = result.substring()
+//        }
+//        return result;
+//    }
+
+    public static String formatTosepara(float data) {
+        DecimalFormat df = new DecimalFormat("#,###");
+        return df.format(data);
+    }
+
+    public static class Atoii extends Atoi {
+    }
+
+
+    public static void set(Class<? extends Atoi> clazz) {
+        System.out.println(clazz.getTypeName());
+
+//        ParameterizedType parameterizedType = (ParameterizedType) clazz.getGenericSuperclass();
+//
+//        Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
+//        for (Type actualTypeArgument : actualTypeArguments) {
+//            System.out.println(actualTypeArgument);
+//        }r
     }
 
     public static String getKidsModeEmailContentId(String encrypt) {
