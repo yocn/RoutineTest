@@ -6,6 +6,10 @@ import algorithm.PrefixSum.BestWorkTime;
 import algorithm.PrefixSum.CommonPrefix;
 import algorithm.PrefixSum.MinM;
 import algorithm.XApple;
+import algorithm.leetcode.LeetCode14;
+import algorithm.leetcode.Leetcode27;
+import algorithm.leetcode.Leetcode394;
+import algorithm.leetcode.Leetcode43;
 import algorithm.monotoneStack.BadHairCows;
 import algorithm.monotoneStack.MinLeftNum;
 import algorithm.monotoneStack.StageWater;
@@ -296,9 +300,56 @@ public class Main {
 //            }
 //        }
 //        JumpSkip.test();
-        new TestI().testMethodA();
-        new TestI().testMethodB();
-        new TestI().testMethodC();
+//        new TestI().testMethodA();
+//        new TestI().testMethodB();
+//        new TestI().testMethodC();
+//        int[] arr = new int[]{29, 13, 55, 12, 67, 33, 25, 72, 73, 34, 12, 11, 8, 77, 65, 54, 72};
+//
+//        int[] arr1 = new int[]{29, 13, 55, 55};
+//        LogUtil.d("::" + get(arr1));
+//        HashMap<Key, String> map = new HashMap<>();
+//        map.put(new Key("a", "a"), "value1");
+//        map.put(new Key("a", "b"), "value2");
+//        LogUtil.d(map.size());
+//        for (Key key : map.keySet()) {
+//            LogUtil.d(map.get(key));
+//        }
+//        /*
+//         * 结果：
+//         * value1
+//         * value2
+//         */
+        new Leetcode394().test();
+    }
+
+    public static class Key {
+        public String key = "";
+        public String append = "";
+
+        public Key(String key, String append) {
+            this.key = key;
+            this.append = append;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            Key key1 = (Key) o;
+            return Objects.equals(key, key1.key) &&
+                    Objects.equals(append, key1.append);
+        }
+
+        @Override
+        public int hashCode() {
+            return key != null ? key.hashCode() : 0;
+        }
+    }
+
+    private static int get(int[] arr) {
+        int m = 0;
+        for (int i = 0; i < arr.length; i++) {
+            m ^= arr[i] ^= i;
+        }
+        return m;
     }
 
     private static String getSubStr(String str, int num) {
