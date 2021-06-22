@@ -22,7 +22,7 @@ public class TestAQS {
     }
 
     private void testMutex() {
-        Mutex mutex = new Mutex();
+        MutexSimple mutex = new MutexSimple();
         Thread thread1 = new Thread(() -> {
             int num = 0;
             while (isRunning) {

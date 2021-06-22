@@ -1,11 +1,8 @@
-import algorithm.Atoi;
+import algorithm.*;
 import algorithm.DynamicProgramming.ZeroOnePackage;
-import algorithm.GreedyAlgorithm;
-import algorithm.JumpSkip;
 import algorithm.PrefixSum.BestWorkTime;
 import algorithm.PrefixSum.CommonPrefix;
 import algorithm.PrefixSum.MinM;
-import algorithm.XApple;
 import algorithm.leetcode.LeetCode14;
 import algorithm.leetcode.Leetcode27;
 import algorithm.leetcode.Leetcode394;
@@ -20,6 +17,9 @@ import algorithm.stackQueue.Stack2Queue;
 import lock.ATestLock;
 import lock.ProducerAndCustomer;
 import structure.testLinkedList;
+import testAQS.TestNumberIncrease;
+import testAQS.TextMutexCustom;
+import testAQS.TextPark;
 import testJava.TestI;
 import util.LogUtil;
 import zipFileTest.testZipFile;
@@ -319,7 +319,16 @@ public class Main {
 //         * value1
 //         * value2
 //         */
-        new Leetcode394().test();
+//        new Leetcode394().test();
+//        Object animValue = null;
+//        float value = animValue == null ? 0f : (float) animValue;
+//        LogUtil.d(value);
+//        LogUtil.d((float)animValue);
+//        new Package01().test();
+//        new Apple12().test();
+//        new TextMutexCustom().test();
+//        new TextPark().test();
+        new TestNumberIncrease().test();
     }
 
     public static class Key {
