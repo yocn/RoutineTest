@@ -63,7 +63,7 @@ public class MutexCustom implements Lock {
 
     @Override
     public boolean tryLock(long time, TimeUnit unit) throws InterruptedException {
-        return false;
+        return sync.tryAcquireNanos(STATUS_TARGET, unit.toNanos(time));
     }
 
     @Override

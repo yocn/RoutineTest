@@ -1,91 +1,14 @@
-import algorithm.*;
-import algorithm.DynamicProgramming.ZeroOnePackage;
-import algorithm.PrefixSum.BestWorkTime;
-import algorithm.PrefixSum.CommonPrefix;
-import algorithm.PrefixSum.MinM;
-import algorithm.leetcode.LeetCode14;
-import algorithm.leetcode.Leetcode27;
-import algorithm.leetcode.Leetcode394;
-import algorithm.leetcode.Leetcode43;
-import algorithm.monotoneStack.BadHairCows;
-import algorithm.monotoneStack.MinLeftNum;
-import algorithm.monotoneStack.StageWater;
-import algorithm.other.HammingDistance;
-import algorithm.other.SortArray;
-import algorithm.stackQueue.Queue2Stack;
-import algorithm.stackQueue.Stack2Queue;
-import lock.ATestLock;
-import lock.ProducerAndCustomer;
-import structure.testLinkedList;
-import testAQS.TestNumberIncrease;
-import testAQS.TextMutexCustom;
-import testAQS.TextPark;
-import testJava.TestI;
-import util.LogUtil;
-import zipFileTest.testZipFile;
+import algorithm.leetcode.LeetCode22;
+import algorithm.leetcode.LeetCode29;
+import algorithm.leetcode.LeetCode49;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-import java.text.DecimalFormat;
-import java.util.*;
 
 /**
  * Created by yocn on 2018/12/4.
  * //
  */
 public class Main {
-    //    public static void main(String[] args) {
-////        System.out.println("asdadsa");
-////        AnnoParser parser = new AnnoParser();
-////        parser.parse(IAlgoProxy.class);
-////        int[] indexs = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-////        for (int i = 0; i < 10; ++i) {
-////            System.out.println("i->" + i + " index->" + indexs[i]);
-////        }
-////        for (int i = 0; i < 10; i++) {
-////            System.out.println("i->" + i + " index->" + indexs[i]);
-////        }
-//
-////        LogUtil.Companion.d("yocn Function->" + Constant.ifInConstents(Constant.Function.class, 100));
-//
-////        LogUtil.Companion.d("yocn Function->" + Constant.Function.TYPE_TOAST);
-////        LogUtil.Companion.d("yocn Function->" + Constant.Function.TYPE_SHOW_LOCAL_IMAGE_0);
-//
-////        ThreadLocal threadLocal;
-////        LinkedHashMap ma;
-////        String string = null;
-////        HashMap<Integer, String> map = new HashMap<>();
-////        map.put(null, "123");
-////        System.out.println("0     ->" + map.get(null) + " v->" + hash(null));
-////
-////        System.out.println("1     ->" + map.hashCode() + " v->" + (map.hashCode() >>> 16) + " x->" + (map.hashCode() ^ (map.hashCode() >>> 16)));
-//
-////        new ATestLock().doTest();
-////        new TestTreeMap().test();
-//
-//        Random random = new Random();
-//        StringBuffer sb = new StringBuffer();
-//        sb.append("{");
-//        for (int i = 0; i < 47; i++) {
-//            sb.append("x:").append(random.nextInt(10000)).append(",y:").append(random.nextInt(10000)).append("|");
-//        }
-//        sb.append("}");
-//        try {
-//            int srcLength = sb.toString().length();
-//            byte[] dest = GZIPUtils.compress(sb.toString());
-//            String ss = new String(dest, "utf-8");
-//            LogUtil.Companion.d("" + ss);
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    static final int hash(Object key) {
-//        int h;
-//        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
-//    }
-//}
 
     public static void main(String[] args) throws IOException {
 //        ZigzagConversion.test();
@@ -255,50 +178,12 @@ public class Main {
 //        rawString = rawString.substring(0, placeholderIndex).concat(
 //                rawString.substring(placeholderIndex + PLACEHOLDER.length()));
 //        LogUtil.d(rawString);
-
 //        String ss = "aaaa@";
 //        String[] re = ss.split("@");
 //
 //        LogUtil.d("re:" + Arrays.asList(re).toString());
 //        LogUtil.d("re:" + formatTosepara(1024134300));
-
-
 //        ArrayList list = new ArrayList();
-//        Thread thread1 = new Thread(() -> {
-//            while(true){
-//                try {
-//                    Thread.sleep(900);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//                LogUtil.d("add");
-//            }
-//        });
-//        Thread thread2 = new Thread(() -> {
-//            while(true){
-//                try {
-//                    Thread.sleep(1000);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//                LogUtil.d("remove");
-//            }
-//        });
-//        thread1.run();
-//        thread2.run();
-
-//        String desc = "Ad-Free Viewing for 1 day";
-//        String desc = "Ad-FreeViewingfor 1 day";
-
-//        int lastFirst = desc.lastIndexOf(' ');
-//        if (lastFirst > 0) {
-//            String lastFirstString = desc.substring(0, lastFirst);
-//            int lastSecond = lastFirstString.lastIndexOf(' ');
-//            if(lastSecond>0){
-//                desc = desc.substring(0, lastSecond).concat("\n").concat(desc.substring(lastSecond));
-//                LogUtil.d("s:" + desc);
-//            }
-//        }
 //        JumpSkip.test();
 //        new TestI().testMethodA();
 //        new TestI().testMethodB();
@@ -307,18 +192,6 @@ public class Main {
 //
 //        int[] arr1 = new int[]{29, 13, 55, 55};
 //        LogUtil.d("::" + get(arr1));
-//        HashMap<Key, String> map = new HashMap<>();
-//        map.put(new Key("a", "a"), "value1");
-//        map.put(new Key("a", "b"), "value2");
-//        LogUtil.d(map.size());
-//        for (Key key : map.keySet()) {
-//            LogUtil.d(map.get(key));
-//        }
-//        /*
-//         * 结果：
-//         * value1
-//         * value2
-//         */
 //        new Leetcode394().test();
 //        Object animValue = null;
 //        float value = animValue == null ? 0f : (float) animValue;
@@ -328,146 +201,10 @@ public class Main {
 //        new Apple12().test();
 //        new TextMutexCustom().test();
 //        new TextPark().test();
-        new TestNumberIncrease().test();
+//        new TestNumberIncrease().test();
+//        new LeetCode49().test();
+//        new LeetCode29().test();
+        new LeetCode22().test();
     }
 
-    public static class Key {
-        public String key = "";
-        public String append = "";
-
-        public Key(String key, String append) {
-            this.key = key;
-            this.append = append;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            Key key1 = (Key) o;
-            return Objects.equals(key, key1.key) &&
-                    Objects.equals(append, key1.append);
-        }
-
-        @Override
-        public int hashCode() {
-            return key != null ? key.hashCode() : 0;
-        }
-    }
-
-    private static int get(int[] arr) {
-        int m = 0;
-        for (int i = 0; i < arr.length; i++) {
-            m ^= arr[i] ^= i;
-        }
-        return m;
-    }
-
-    private static String getSubStr(String str, int num) {
-        String result = "";
-        int i = 0;
-        while (i < num) {
-            int lastFirst = str.lastIndexOf(' ');
-            result = str.substring(lastFirst) + result;
-            str = str.substring(0, lastFirst);
-            i++;
-        }
-        return result.substring(1);
-    }
-//    public static String getCoinsString(int num) {
-//        String raw = String.valueOf(num);
-//        String result = raw;
-//        if (num > 1000) {
-//            result = result.substring()
-//        }
-//        return result;
-//    }
-
-    public static String formatTosepara(float data) {
-        DecimalFormat df = new DecimalFormat("#,###");
-        return df.format(data);
-    }
-
-    public static class Atoii extends Atoi {
-    }
-
-
-    public static void set(Class<? extends Atoi> clazz) {
-        System.out.println(clazz.getTypeName());
-
-//        ParameterizedType parameterizedType = (ParameterizedType) clazz.getGenericSuperclass();
-//
-//        Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
-//        for (Type actualTypeArgument : actualTypeArguments) {
-//            System.out.println(actualTypeArgument);
-//        }r
-    }
-
-    public static String getKidsModeEmailContentId(String encrypt) {
-        // 33 is '!', char under 33 maybe cannot show normal, fake char must bigger than 33
-        int base = (int) 33;
-        char[] chars = encrypt.toCharArray();
-        int length = chars.length;
-        char[] targetChars = new char[length * 2];
-        for (int i = 0; i < length; i++) {
-            targetChars[i * 2] = chars[i];
-            int half = chars[i] / 2;
-            half = half < 33 ? half + (chars[i] - half) / 2 : half;
-            targetChars[i * 2 + 1] = (char) half;
-        }
-        return String.valueOf(targetChars);
-    }
-
-    public static void XApple() {
-        int apple = 10;
-        XAppleInternal("", apple, 0, 0);
-    }
-
-    private static void XAppleInternal(String result, int remain, int eat, int days) {
-        if (eat != 0) {
-            result = result + " " + eat;
-        }
-        if (remain == 0) {
-            LogUtil.Companion.d(days + " - " + result);
-            return;
-        }
-        if (remain < 0) {
-            return;
-        }
-        days++;
-        XAppleInternal(result, remain - 1, 1, days);
-        XAppleInternal(result, remain - 2, 2, days);
-        XAppleInternal(result, remain - 3, 3, days);
-    }
-
-//    static class O {
-//        public O(int x) {
-//            this.x = x;
-//        }
-//
-//        public int x;
-//    }
-//
-//    public static void add(int x, int y) {
-//        x++;
-//        y++;
-//    }
-//
-//    public static void add(Integer x, Integer y) {
-//        x++;
-//        y++;
-//    }
-//
-//    public static void add(int[] x, int[] y) {
-//        x[0] = 10;
-//        y[0] = 10;
-//    }
-//
-//    public static void add(String x, String y) {
-//        x += "a";
-//        y += "a";
-//    }
-//
-//    public static void add(O x, O y) {
-//        x.x++;
-//        y.x++;
-//    }
 }
